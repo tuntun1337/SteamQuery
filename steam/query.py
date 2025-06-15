@@ -164,7 +164,7 @@ class SteamQuery:
         server_info['online'] = True
         server_info['ip'] = self.ip
         server_info['port'] = self.port
-        server_info['name'] = data[0].decode()
+        server_info['name'] = data[0].decode('utf-8', errors='ignore')
         server_info['map'] = data[1].decode()
         server_info['game'] = data[2].decode()
         server_info['description'] = data[3].decode()
